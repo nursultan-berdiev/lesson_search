@@ -10,18 +10,6 @@ import datetime
 from .models import Customer, Product
 from django.views.generic import ListView, TemplateView
 
-class CustomerListView(ListView):
-    model = Customer
-    template_name = 'tables-data.html'
-    context_object_name = 'customers'
-
-class Test(TemplateView):
-    template_name = 'forms-elements.html'
-
-class ProductListView(ListView):
-    model = Product
-    template_name = 'tables-products.html'
-    context_object_name = 'products'
 
 def generate(request, count):
     birth_start_date = datetime.date(1955, 1, 1)
